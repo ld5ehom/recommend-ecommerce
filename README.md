@@ -1,84 +1,73 @@
-# E-commerce Search & Product Recommendation with High-Value Customer Analysis
+# Improving Product Recommendation for Churn Prevention in E-commerce
 
 ## Project Overview
 
--   Implemented recommendation modules including search recommendation (product embeddings and retrieval), similar product recommendation (embedding similarity), co-purchase recommendation (filtering), recently viewed and related product ranking, category-based recommendation (preprocessing), and banner recommendation (multi-armed bandit).
--   Improved product search accuracy and discovery through embedding-based retrieval and ranking strategies.
--   Leveraged outputs from the recommendation system to analyze high-value customer behavior and create data-driven profiles.
--   Built classification models to predict upselling potential and incremental revenue contributions.
--   Applied association rule mining to identify product affinities and designed bundle promotion strategies.
--   Simulated business impact through scenario analysis to estimate revenue lift from targeted campaigns.
+-   Implemented product recommendation modules including embedding-based search, similar item ranking, co-purchase filtering, recently viewed & related ranking, category-based suggestions, and banner optimization with multi-armed bandit.
+-   Enhanced product discovery and personalization through embedding-based retrieval and ranking strategies.
+-   Defined churn behavior in the e-commerce context and conducted exploratory analysis to identify differences between churned and retained customers (e.g., transaction frequency, card type, income category).
+-   Built binary classification models (Logistic Regression, Random Forest, XGBoost) to predict churn risk and evaluated performance with accuracy, precision, recall, and AUC.
+-   Derived retention strategies from churn drivers (e.g., low transaction activity, specific customer segments) and simulated potential revenue impact through targeted campaigns.
 
 ---
 
 ## Problem Statement
 
-E-commerce platforms need to optimize both product discovery and revenue growth. While recommendation systems enhance engagement through personalized suggestions, they often ignore the heterogeneous purchasing behaviors of high-value customers. Traditional loyalty programs fail to capture heterogeneous behaviors among high-value customers, limiting upselling and cross-selling opportunities.
-As a result, upselling and cross-selling opportunities are underutilized, limiting the platform’s ability to maximize sales.
+E-commerce platforms face two challenges:
+
+1. Helping customers discover relevant products efficiently.
+2. Preventing customer churn that reduces long-term revenue.
+
+While recommendation systems improve personalization and short-term engagement, they often overlook churn risk, leading to lost sales and higher acquisition costs.
 
 ---
 
 ## Project Idea
 
-This project combines advanced product recommendation modules with customer analytics to improve both personalization and monetization.  
-The system not only retrieves and ranks products effectively but also leverages recommendation insights to segment high-value customers, predict their upselling potential, and design targeted marketing strategies.
+The project integrates product recommendation improvements with churn prediction analysis to strengthen both personalization and retention.  
+It enhances product search and ranking modules for better engagement, while applying churn modeling techniques to proactively reduce attrition and improve customer lifetime value.
 
 ---
 
 ## System Overview (Pipeline)
 
-1. **Data Exploration**
+1. Data Exploration
 
-    - Analyze product catalogs, transaction logs, and customer purchase histories.
+    - Analyze product catalogs, transaction logs, and customer histories.
+    - Define churn and compare churn vs. retained customer behavior (EDA on demographics, transaction patterns, product usage).
 
-2. **Recommendation Modules**
+2. Recommendation Modules
 
-    - Search recommendation (Product embeddings and retrieval)
-    - Similar product recommendation (Embedding similarity)
-    - Co-purchase recommendation (Filtering-based)
-    - Recently viewed & related product ranking
-    - Category-based recommendation (Preprocessing)
-    - Banner recommendation (Multi-armed bandit)
+    - Embedding-based search retrieval
+    - Similar item recommendation
+    - Co-purchase recommendation
+    - Recently viewed & related ranking
+    - Category-based recommendation
+    - Banner optimization with multi-armed bandit
 
-3. **Customer Segmentation & Profiling**
+3. Churn Prediction Modeling
 
-    - Use clustering to segment high-value customers by purchase patterns.
-    - Develop behavioral profiles to capture distinct shopping traits.
+    - Train classification models to identify churn risk.
+    - Evaluate performance with precision, recall, accuracy, and AUC.
 
-4. **Upselling Prediction**
+4. Retention Strategy
 
-    - Train classification models to predict customers’ upselling potential.
-    - Estimate incremental revenue contribution from prioritized customer groups.
-
-5. **Association Rule Mining**
-
-    - Identify product affinities and co-purchase patterns.
-    - Create bundle promotions to maximize cross-selling opportunities.
-
-6. **Revenue Impact Simulation**
-    - Validate strategies using scenario analysis.
-    - Estimate incremental revenue lift from targeted campaigns.
+    - Identify churn drivers through statistical analysis and EDA.
+    - Propose targeted retention actions and estimate business impact with scenario simulations.
 
 ---
 
 ## Setup
 
 ```
-
 python -m venv venv
-
 ```
 
 ```
-
 source venv/bin/activate
-
 ```
 
 ```
-
 pip install -r requirements.txt
-
 ```
 
 ---
@@ -86,9 +75,7 @@ pip install -r requirements.txt
 ## Start
 
 ```
-
 source venv/bin/activate
-
 ```
 
 ---
@@ -96,15 +83,5 @@ source venv/bin/activate
 ## Save Requirement.txt
 
 ```
-
 pip freeze > requirements.txt
-
-```
-
-```
-
-```
-
-```
-
 ```
