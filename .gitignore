@@ -139,6 +139,7 @@ venv.bak/
 */.env
 .src/.env
 src/.env
+/venv/
 
 # Spyder project settings
 .spyderproject
@@ -198,3 +199,6 @@ cython_debug/
 .cursorindexingignore
 
 .DS_Store
+.docs
+.docs/
+/docs/
