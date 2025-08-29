@@ -2,7 +2,7 @@
 
 ## Project Overview
 
--   Implemented product recommendation modules including embedding-based search, similar item ranking, co-purchase filtering, recently viewed & related ranking, category-based suggestions, and banner optimization with multi-armed bandit.
+-   Implemented product recommendation modules including item–query embedding-based search retrieval, similar item ranking, co-purchase filtering, recently viewed & related ranking, category-based suggestions, and banner optimization with multi-armed bandit.
 -   Enhanced product discovery and personalization through embedding-based retrieval and ranking strategies.
 -   Defined churn behavior in the e-commerce context and conducted exploratory analysis to identify differences between churned and retained customers (e.g., transaction frequency, card type, income category).
 -   Built binary classification models (Logistic Regression, Random Forest) to predict churn risk and evaluated performance with accuracy, precision, recall, and AUC.
@@ -37,7 +37,7 @@ It enhances product search and ranking modules for better engagement while apply
 
 2. **Recommendation Modules**
 
-    - Embedding-based search retrieval
+    - Embedding-based search retrieval (implemented with item–query embeddings and ANN-based retrieval)
     - Similar item recommendation
     - Co-purchase recommendation
     - Recently viewed & related ranking
