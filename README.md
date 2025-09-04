@@ -2,11 +2,13 @@
 
 ## Project Overview
 
--   Implemented product recommendation modules including item–query embedding-based search retrieval, similar item ranking, co-purchase filtering, recently viewed & related ranking, category-based suggestions, and banner optimization with multi-armed bandit.
--   Enhanced product discovery and personalization through embedding-based retrieval and ranking strategies.
--   Defined churn behavior in the e-commerce context and conducted exploratory analysis to identify differences between churned and retained customers (e.g., transaction frequency, card type, income category).
--   Built binary classification models (Logistic Regression, Random Forest) to predict churn risk and evaluated performance with accuracy, precision, recall, and AUC.
--   Derived retention strategies from churn drivers (e.g., low transaction activity, high age group, low card category) and simulated potential revenue impact through targeted campaigns.
+**E-commerce Product Recommendation & Churn Prediction**
+
+-   Designed an embedding based search retrieval system with item query embeddings and ANN to improve product discovery efficiency.
+-   Built a PyTorch Item2Vec model for similar item recommendation as well as co purchase filtering and recently viewed product ranking to enhance personalization.
+-   Implemented category based filtering and banner optimization with multi armed bandit to deliver targeted promotions and diverse recommendation strategies.
+-   Developed churn prediction models using Logistic Regression and Random Forest to identify at risk customers and designed retention strategies with measurable business impact.
+-   Technologies: Python, PyTorch, TensorFlow, Scikit learn, Pandas, Numpy, ANN Search, Multi armed Bandit
 
 ---
 
@@ -23,7 +25,7 @@ While recommendation systems improve personalization and short-term engagement, 
 
 ## Project Idea
 
-This project integrates **recommendation system improvement** with **churn prediction modeling** to strengthen both personalization and retention.  
+This project integrates recommendation system improvement with churn prediction modeling to strengthen both personalization and retention.  
 It enhances product search and ranking modules for better engagement while applying predictive models to proactively reduce churn and increase customer lifetime value (LTV).
 
 ---
@@ -37,11 +39,12 @@ It enhances product search and ranking modules for better engagement while apply
 
 2. **Recommendation Modules**
 
-    - Embedding-based search retrieval (implemented with item–query embeddings and ANN-based retrieval)
-    - Similar item recommendation
+    - Embedding-based search retrieval (item–query embeddings with ANN retrieval)
+    - Similar item recommendation trained via PyTorch Item2Vec (skip-gram with negative sampling)
+    - Category-based filtering using item metadata for constrained discovery
+    - Multitask neural network predicting click, add-to-cart, and purchase to optimize downstream ranking
     - Co-purchase recommendation
-    - Recently viewed & related ranking
-    - Category-based recommendation
+    - Recently viewed and related ranking
     - Banner optimization with multi-armed bandit
 
 3. **Churn Prediction Modeling**
@@ -64,11 +67,12 @@ It enhances product search and ranking modules for better engagement while apply
 
 ## Summary
 
--   Improved recommendation modules for personalization and engagement.
+-   Improved recommendation modules for personalization and engagement, with new deep learning–based embedding and multitask learning architectures integrated into the system.
+-   Combined traditional collaborative signals (co-purchase, recently viewed) with embedding similarity and category filters for more diverse recommendation strategies.
 -   Built churn prediction models to identify at-risk customers early.
 -   Random Forest achieved better recall and AUC, making it more practical for churn prevention.
 -   High-risk customers tend to show low transaction activity, older age, and lower card categories.
--   The project demonstrates that **combining recommendation systems with churn modeling** enables data-driven strategies for both growth and retention in e-commerce.
+-   The project demonstrates that combining recommendation systems with churn modeling enables data-driven strategies for both growth and retention in e-commerce.
 
 ---
 
